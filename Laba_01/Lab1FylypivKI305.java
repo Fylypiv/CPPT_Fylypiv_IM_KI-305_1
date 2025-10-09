@@ -2,25 +2,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
-/**
- * Лабораторна робота №1
- * Варіант: побудова заштрихованих верхнього та нижнього трикутників квадратної матриці (пісочний годинник)
- * 
- * @author [Твоє Прізвище]
- * @version 1.0
- * @since 2025-10-09
- */
 public class Lab1FylypivKI305 {
-    /**
-     * Головний метод програми.
-     * Програма будує зубчастий масив, який містить лише заштриховані області квадратної матриці,
-     * формуючи фігуру у вигляді пісочного годинника (верхній і нижній заштриховані трикутники).
-     * 
-     * @param args аргументи командного рядка (не використовуються)
-     */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
         try {
             System.out.print("Введiть розмiр матрицi n: ");
             int n = scanner.nextInt();
@@ -30,7 +14,7 @@ public class Lab1FylypivKI305 {
             String input = scanner.nextLine();
 
             if (input.length() != 1) {
-                System.out.println("❌ Помилка: потрібно ввести рiвно один символ!");
+                System.out.println("Помилка: потрібно ввести рiвно один символ!");
                 return;
             }
 
@@ -49,7 +33,7 @@ public class Lab1FylypivKI305 {
                     }
                 }
 
-                // Створення підмасиву потрібного розміру
+                // Виділення пам'яті під потрібну кількість символів
                 matrix[i] = new char[count];
 
                 int index = 0;
@@ -89,7 +73,7 @@ public class Lab1FylypivKI305 {
                 }
             }
 
-            System.out.println("✅ Зубчастий масив збережено у output.txt");
+            System.out.println("Зубчастий масив збережено у output.txt");
 
         } catch (IOException e) {
             System.out.println("IO помилка: " + e.getMessage());
