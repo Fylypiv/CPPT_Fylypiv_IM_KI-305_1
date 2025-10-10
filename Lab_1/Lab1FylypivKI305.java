@@ -2,17 +2,28 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
+/**
+ * Клас {@code Lab1FylypivKI305} створює зубчастий візерунок (двовимірний масив змінної довжини рядків),
+ * заповнює його заданим символом та записує результат у текстовий файл.
+ * @author Fylypiv
+ * @version 1.0
+ */
 public class Lab1FylypivKI305 {
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+
         try {
+            // Зчитування розміру матриці
             System.out.print("Введiть розмiр матрицi n: ");
             int n = scanner.nextInt();
-            scanner.nextLine(); // очищення буфера
+            scanner.nextLine(); // очищення буфера після nextInt()
 
+            // Зчитування символу-заповнювача
             System.out.print("Введiть символ-заповнювач: ");
             String input = scanner.nextLine();
 
+            // Перевірка правильності введення
             if (input.length() != 1) {
                 System.out.println("Помилка: потрібно ввести рiвно один символ!");
                 return;
@@ -20,20 +31,20 @@ public class Lab1FylypivKI305 {
 
             char fill = input.charAt(0);
 
-            // Створення зубчастого масиву
+            // --- Створення зубчастого масиву ---
             char[][] matrix = new char[n][];
 
             for (int i = 0; i < n; i++) {
                 int count = 0;
 
-                // Обчислення кількості заштрихованих елементів у рядку
+                // Обчислення кількості елементів у кожному рядку
                 for (int j = 0; j < n; j++) {
                     if (j >= i && j < n - i || j <= i && j >= n - i - 1) {
                         count++;
                     }
                 }
 
-                // Виділення пам'яті під потрібну кількість символів
+                // Виділення пам'яті для поточного рядка
                 matrix[i] = new char[count];
 
                 int index = 0;
@@ -44,7 +55,7 @@ public class Lab1FylypivKI305 {
                 }
             }
 
-            // Виведення в консоль
+            // --- Виведення результату в консоль ---
             System.out.println("\nРезультат:");
             for (int i = 0; i < n; i++) {
                 int index = 0;
@@ -58,7 +69,7 @@ public class Lab1FylypivKI305 {
                 System.out.println();
             }
 
-            // Запис у файл
+            // --- Запис результату у файл ---
             try (FileWriter writer = new FileWriter("output.txt")) {
                 for (int i = 0; i < n; i++) {
                     int index = 0;
