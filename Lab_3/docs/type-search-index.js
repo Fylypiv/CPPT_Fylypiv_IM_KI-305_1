@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"KI305.Fylypiv.Lab3","l":"ClimateControlDevice"},{"p":"KI305.Fylypiv.Lab3","l":"Conditioner"},{"p":"KI305.Fylypiv.Lab3","l":"Controllable"},{"p":"KI305.Fylypiv.Lab3","l":"Main"}];updateSearchResults();
