@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"KI305.Fylypiv.Lab5","l":"ExpressionCalculator"},{"p":"KI305.Fylypiv.Lab5","l":"FileHandler"},{"p":"KI305.Fylypiv.Lab5","l":"Lab5Main"}];updateSearchResults();
